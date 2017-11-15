@@ -7,7 +7,7 @@ Content:
 2. System requirements
 3. Installation 
 4. pd_config.py explained
-5. pythonic_draughts_gui.html explained and installation
+5. Graphical User Interface explained and installation
 --------------------------------------------------------
 
 1. Brief description
