@@ -61,25 +61,25 @@ Content:
    
    5.1.  How to use pythonic_draughts_gui.html:
    
-     - The page displayed in the browser contains the playing board with playing figures in the left half of the screen. At the start, it is most likely the last position from a previous game. If it is started for the first time, the board is empty (without figures): that is because the file position_data.js does not exist yet (PD creates it).
-     - On the right side of the board are listed possible moves more or less similar to the checker's notation, in contrast to the command line, where possible moves are listed in chess notation. Numbers of moves correspond to those in the command line. 
-     - Finally, on the bottom is the button 'Rotate', which when clicked rotates the board.
+    - The page displayed in the browser contains the playing board with playing figures in the left half of the screen. At the start, it is most likely the last position from a previous game. If it is started for the first time, the board is empty (without figures): that is because the file position_data.js does not exist yet (PD creates it).
+    - On the right side of the board are listed possible moves more or less similar to the checker's notation, in contrast to the command line, where possible moves are listed in chess notation. Numbers of moves correspond to those in the command line. 
+    - Finally, on the bottom is the button 'Rotate', which when clicked rotates the board.
     
    5.2. How to use main_position_editor.html: 
    
-     - Similarly to pythonic_draughts_gui.html, the page presents the playing board.
-     - Click to a square with a playing figure removes that figure from the board.
-     - Left click to empty square places white figure to that square.
-     - Right click does the same for red figures.
-     - Figures are switched to man/king clicking the yellow button in the upper left corner.
-     - Under the board is the text area which displays a string in the format of main_position. The string can be safely saved to the pd_config.py. When position is set, simply click to the text area and copy the text (Ctrl + a, Ctrl + c).
+    - Similarly to pythonic_draughts_gui.html, the page presents the playing board.
+    - Click to a square with a playing figure removes that figure from the board.
+    - Left click to empty square places white figure to that square.
+    - Right click does the same for red figures.
+    - Figures are switched to man/king clicking the yellow button in the upper left corner.
+    - Under the board is the text area which displays a string in the format of main_position. The string can be safely saved to the pd_config.py. When position is set, simply click to the text area and copy the text (Ctrl + a, Ctrl + c).
     
    5.3. Installation guide: 
    
-     - within the directory with PD installation create subdirectory named pd_gui.
-     - copy files pythonic_draughts_gui.html, main_position_editor.html and pythonic_draughts_gui.css to the subdirectory pd_gui.
-     - Internet connection is necessary in most cases to run these html pages from the file because they import bootstrap.min.css and jquery.min.js. Some browsers may have cashed these frameworks - in this case, internet connection is not required.
-     - Both pythonic_draughts_gui.html and main_position_editor.html, were tested on Chrome version 62.0.3202.94 (Official Build) (64-bit).
+    - within the directory with PD installation create subdirectory named pd_gui.
+    - copy files pythonic_draughts_gui.html, main_position_editor.html and pythonic_draughts_gui.css to the subdirectory pd_gui.
+    - Internet connection is necessary in most cases to run these html pages from the file because they import bootstrap.min.css and jquery.min.js. Some browsers may have cashed these frameworks - in this case, internet connection is not required.
+    - Both pythonic_draughts_gui.html and main_position_editor.html, were tested on Chrome version 62.0.3202.94 (Official Build) (64-bit).
    
    DO NOT set the variable is_gui to 1 in pd_config.py if directory pd_gui is not present. PD will crash on attempt to write position.js to that directory. If pd_gui directory is not present, PD does not offer to change is_gui variable in Settings Menu.
     
