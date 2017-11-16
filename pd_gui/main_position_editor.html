@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>main_position Editor</title>
+		<meta name="description" content="Simple GUI to set a position and get the string in a format of default_main_position for pd_config.py">
+		<meta name="author" content="Jaroslav Belkov">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+		<link rel="stylesheet" href="pythonic_draughts_gui.css">
+		<script>myArray = [3, '0', '0', '0', '0', '0', '0', '0', '0', 3, '0', '0', '0', '0', '0', '0', '0', '0', 3, '0', '0', '0', '0', '0', '0', '0', '0', 3, '0', '0', '0', '0', '0', '0', '0', '0']</script>
+		<script src = "position_data.js"></script>
+	</head>
+	<body oncontextmenu="return false;">
+		<div style = "margin-top: 100px;"></div>
+		<div class = "my-container">
+			<div class = "row">
+				<div class = "col-sm-2">
+				<button class = "btn btn-warning" onclick = "toggle(this)" style = "float: right;">Man</button>
+				</div>
+				<div class = "col-sm-1">
+					<div class = "white"></div>
+					<div <div id="31" class = "black" onmousedown = "myFunc(id, this.innerHTML, event)"></div><span>31/5</span>
+					<div class = "white"></div>
+					<div <div id="22" class = "black" onmousedown = "myFunc(id, this.innerHTML, event)"></div><span>22/14</span>
+					<div class = "white"></div>
+					<div <div id="13" class = "black" onmousedown = "myFunc(id, this.innerHTML, event)"></div><span>13/23</span>
+					<div class = "white"></div>
+					<div <div id="4" class = "black" onmousedown = "myFunc(id, this.innerHTML, event)"></div><span>4/32</span>
+				</div>
+				<div class = "col-sm-1">
+					<div <div id="35" class = "black" onmousedown = "myFunc(id, this.innerHTML, event)"></div><span>35/1</span>
+					<div class = "white"></div>
+					<div <div id="26" class = "black" onmousedown = "myFunc(id, this.innerHTML, event)"></div><span>26/10</span>
+					<div class = "white"></div>
+					<div <div id="17" class = "black" onmousedown = "myFunc(id, this.innerHTML, event)"></div><span>17/19</span>
+					<div class = "white"></div>
+					<div <div id="8" class = "black" onmousedown = "myFunc(id, this.innerHTML, event)"></div><span>8/28</span>
+					<div class = "white"></div>
+				</div>
+				<div class = "col-sm-1">
+					<div class = "white"></div>
+					<div <div id="30" class = "black" onmousedown = "myFunc(id, this.innerHTML, event)"></div><span>30/16</span>
+					<div class = "white"></div>
+					<div <div id="21" class = "black" onmousedown = "myFunc(id, this.innerHTML, event)"></div><span>21/15</span>
+					<div class = "white"></div>
+					<div <div id="12" class = "black" onmousedown = "myFunc(id, this.innerHTML, event)"></div><span>12/24</span>
+					<div class = "white"></div>
+					<div <div id="3" class = "black" onmousedown = "myFunc(id, this.innerHTML, event)"></div><span>3/33</span>
+				</div>
+				<div class = "col-sm-1">
+					<div <div id="34" class = "black" onmousedown = "myFunc(id, this.innerHTML, event)"></div><span>34/2</span>
+					<div class = "white"></div>
+					<div <div id="25" class = "black" onmousedown = "myFunc(id, this.innerHTML, event)"></div><span>25/11</span>
+					<div class = "white"></div>
+					<div <div id="16" class = "black" onmousedown = "myFunc(id, this.innerHTML, event)"></div><span>16/20</span>
+					<div class = "white"></div>
+					<div <div id="7" class = "black" onmousedown = "myFunc(id, this.innerHTML, event)"></div><span>7/29</span>
+					<div class = "white"></div>
+				</div>
+				<div class = "col-sm-1">
+					<div class = "white"></div>
+					<div <div id="29" class = "black" onmousedown = "myFunc(id, this.innerHTML, event)"></div><span>29/7</span>
+					<div class = "white"></div>
+					<div <div id="20" class = "black" onmousedown = "myFunc(id, this.innerHTML, event)"></div><span>20/16</span>
+					<div class = "white"></div>
+					<div <div id="11" class = "black" onmousedown = "myFunc(id, this.innerHTML, event)"></div><span>11/25</span>
+					<div class = "white"></div>
+					<div <div id="2" class = "black" onmousedown = "myFunc(id, this.innerHTML, event)"></div><span>2/34</span>
+				</div>
+				<div class = "col-sm-1">
+					<div <div id="33" class = "black" onmousedown = "myFunc(id, this.innerHTML, event)"></div><span>33/3</span>
+					<div class = "white"></div>
+					<div <div id="24" class = "black" onmousedown = "myFunc(id, this.innerHTML, event)"></div><span>24/12</span>
+					<div class = "white"></div>
+					<div <div id="15" class = "black" onmousedown = "myFunc(id, this.innerHTML, event)"></div><span>15/21</span>
+					<div class = "white"></div>
+					<div <div id="6" class = "black" onmousedown = "myFunc(id, this.innerHTML, event)"></div><span>6/30</span>
+					<div class = "white"></div>
+				</div>
+				<div class = "col-sm-1">
+					<div class = "white"></div>
+					<div <div id="28" class = "black" onmousedown = "myFunc(id, this.innerHTML, event)"></div><span>28/8</span>
+					<div class = "white"></div>
+					<div <div id="19" class = "black" onmousedown = "myFunc(id, this.innerHTML, event)"></div><span>19/17</span>
+					<div class = "white"></div>
+					<div <div id="10" class = "black" onmousedown = "myFunc(id, this.innerHTML, event)"></div><span>10/26</span>
+					<div class = "white"></div>
+					<div <div id="1" class = "black" onmousedown = "myFunc(id, this.innerHTML, event)"></div><span>1/35</span>
+				</div>
+				<div class = "col-sm-1">
+					<div <div id="32" class = "black" onmousedown = "myFunc(id, this.innerHTML, event)"></div><span>32/4</span>
+					<div class = "white"></div>
+					<div <div id="23" class = "black" onmousedown = "myFunc(id, this.innerHTML, event)"></div><span>23/13</span>
+					<div class = "white"></div>
+					<div <div id="14" class = "black" onmousedown = "myFunc(id, this.innerHTML, event)"></div><span>14/22</span>
+					<div class = "white"></div>
+					<div <div id="5" class = "black" onmousedown = "myFunc(id, this.innerHTML, event)"></div><span>5/31</span>
+					<div class = "white"></div>
+				</div>
+			</div>
+			<br><br>
+			<textarea id = "output" rows="3" cols="200" ></textarea>
+			
+			
+		</div>
+		
+		
+		<script>
+			graphics =	["<div class = \"top-indent\"></div><div class = \"red-man\"></div>", "<div class = \"top-king-indent\"></div><div class = \"red-king\"><span class = \"royal\">R</span></div>", "<div class = \"top-indent\"></div><div class = \"white-man\"></div>","<div class = \"top-king-indent\"></div><div class = \"white-king\"><span class = \"royal\">R</span></div>"];
+			toggled = ["<div class = \"top-indent\"></div><div class = \"white-man\"></div>", "-1", "<div class = \"top-indent\"></div><div class = \"red-man\"></div>", "1"]; 
+						
+			for (i=1; i<36; i++){
+				if (myArray[i] == "1"){
+					document.getElementById(i).innerHTML = graphics[0];
+				}
+				if (myArray[i] == "2"){
+					document.getElementById(i).innerHTML = graphics[1];
+				}
+				if (myArray[i] == "-1"){
+					document.getElementById(i).innerHTML = graphics[2];
+				}
+				if (myArray[i] == "-2"){
+					document.getElementById(i).innerHTML = graphics[3];
+				}
+				if (myArray[i] == "0"){
+					document.getElementById(i).innerHTML = "";
+				}
+			}
+			
+			
+			
+			function toggle(object){
+				if (object.innerHTML == "Man"){
+					object.innerHTML = "King";
+					toggled = ["<div class = \"top-king-indent\"></div><div class = \"white-king\"><span class = \"royal\">R</span></div>", "-2", "<div class = \"top-king-indent\"></div><div class = \"red-king\"><span class = \"royal\">R</span></div>", "2"];
+				}else{
+					object.innerHTML = "Man";
+					toggled = ["<div class = \"top-indent\"></div><div class = \"white-man\"></div>", "-1", "<div class = \"top-indent\"></div><div class = \"red-man\"></div>", "1"];
+				}
+			}
+			
+			function myFunc(id, piece, event){
+				if (event.button == 0){
+					man = toggled[0];
+					man_value = toggled[1];
+				}else{
+					man = toggled[2];
+					man_value = toggled[3];
+				}
+				el = document.getElementById(id);
+				if (piece == ""){
+					el.innerHTML = man;
+					myArray[id] = man_value;
+				}else{
+					el.innerHTML = "";
+					myArray[id] = "0";
+				}
+				
+				var reds = 0;
+				var whites = 0;
+				var myStringReds = "";
+				var myStringWhites = "";
+				
+				for (i=1; i<36; i++){
+					if (myArray[i] == "1" || myArray[i] == "2"){
+						reds += 1;
+					}
+					if (myArray[i] == "-1" || myArray[i] == "-2"){
+						whites += 1;
+					}
+					myStringReds += myArray[i] + ", ";
+					
+					if (myArray[i] != "3"){
+						myStringWhites = ", " + (parseInt(myArray[i]) * -1).toString() + myStringWhites
+					}else{
+						myStringWhites = ", 3" + myStringWhites;
+					}
+				}
+				
+				myString = "[[0, " + reds.toString() + ", 0, 0, " + whites.toString() + "], [3, " + myStringReds.slice(0, -2) + "], [3, " + myStringWhites.slice(2) + "]]";
+				document.getElementById('output').innerHTML = myString;
+			}
+		</script>
+	</body>
+</html>
