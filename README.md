@@ -73,6 +73,7 @@ Content:
    - Right click does the same for red figures.
    - Figures are switched to man/king clicking the yellow button in the upper left corner.
    - Under the board is the text area which displays a string in the format of main_position. The string can be safely saved to the pd_config.py. When position is set, simply click to the text area and copy the text (Ctrl + a, Ctrl + c).
+   - If Python shell is used, it needs to be restarted after every update to pd_config.py. That is because the shell does not throw once imported modules even in the case when the program is terminated.
     
   5.3. Installation guide: 
    
