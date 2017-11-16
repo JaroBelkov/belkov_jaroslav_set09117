@@ -1,0 +1,184 @@
+ <!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>~~~Pythonic~Draughts~~~</title>
+		<meta name="description" content="Simple GUI for Pythonic Draughts school project">
+		<meta name="author" content="Jaroslav Belkov">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+		<link rel="stylesheet" href="pythonic_draughts_gui.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<div id = "myScript" style = "margin-top: 100px;">
+			<script src = "position_data.js"></script>
+		</div>	
+		<div class = "my-container">
+			<div class = "row">
+				<div class = "col-sm-1 border-lud">
+					<div class = "white"></div>
+					<div class = "black" id="31"></div><span>31<sub>/5</sub></span>
+					<div class = "white"></div>
+					<div class = "black" id="22"></div><span>22<sub>/14</sub></span>
+					<div class = "white"></div>
+					<div class = "black" id="13"></div><span>13<sub>/23</sub></span>
+					<div class = "white"></div>
+					<div class = "black" id="4"></div><span>4<sub>/32</sub></span>
+				</div>
+				<div class = "col-sm-1 border-ud">
+					<div class = "black" id="35"></div><span>35<sub>/1</sub></span>
+					<div class = "white"></div>
+					<div class = "black" id="26"></div><span>26<sub>/10</sub></span>
+					<div class = "white"></div>
+					<div class = "black" id="17"></div><span>17<sub>/19</sub></span>
+					<div class = "white"></div>
+					<div class = "black" id="8"></div><span>8<sub>/28</sub></span>
+					<div class = "white"></div>
+				</div>
+				<div class = "col-sm-1 border-ud">
+					<div class = "white"></div>
+					<div class = "black" id="30"></div><span>30<sub>/6</sub></span>
+					<div class = "white"></div>
+					<div class = "black" id="21"></div><span>21<sub>/15</sub></span>
+					<div class = "white"></div>
+					<div class = "black" id="12"></div><span>12<sub>/24</sub></span>
+					<div class = "white"></div>
+					<div class = "black" id="3"></div><span>3<sub>/33</sub></span>
+				</div>
+				<div class = "col-sm-1 border-ud">
+					<div class = "black" id="34"></div><span>34<sub>/2</sub></span>
+					<div class = "white"></div>
+					<div class = "black" id="25"></div><span>25<sub>/11</sub></span>
+					<div class = "white"></div>
+					<div class = "black" id="16"></div><span>16<sub>/20</sub></span>
+					<div class = "white"></div>
+					<div class = "black" id="7"></div><span>7<sub>/29</sub></span>
+					<div class = "white"></div>
+				</div>
+				<div class = "col-sm-1 border-ud">
+					<div class = "white"></div>
+					<div class = "black" id="29"></div><span>29<sub>/7</sub></span>
+					<div class = "white"></div>
+					<div class = "black" id="20"></div><span>20<sub>/16</sub></span>
+					<div class = "white"></div>
+					<div class = "black" id="11"></div><span>11<sub>/25</sub></span>
+					<div class = "white"></div>
+					<div class = "black" id="2"></div><span>2<sub>/34</sub></span>
+				</div>
+				<div class = "col-sm-1 border-ud">
+					<div class = "black" id="33"></div><span>33<sub>/3</sub></span>
+					<div class = "white"></div>
+					<div class = "black" id="24"></div><span>24<sub>/12</sub></span>
+					<div class = "white"></div>
+					<div class = "black" id="15"></div><span>15<sub>/21</sub></span>
+					<div class = "white"></div>
+					<div class = "black" id="6"></div><span>6<sub>/30</sub></span>
+					<div class = "white"></div>
+				</div>
+				<div class = "col-sm-1 border-ud">
+					<div class = "white"></div>
+					<div class = "black" id="28"></div><span>28<sub>/8</sub></span>
+					<div class = "white"></div>
+					<div class = "black" id="19"></div><span>19<sub>/17</sub></span>
+					<div class = "white"></div>
+					<div class = "black" id="10"></div><span>10<sub>/26</sub></span>
+					<div class = "white"></div>
+					<div class = "black" id="1"></div><span>1<sub>/35</sub></span>
+				</div>
+				<div class = "col-sm-1 border-rud">
+					<div class = "black" id="32"></div><span>32<sub>/4</sub></span>
+					<div class = "white"></div>
+					<div class = "black" id="23"></div><span>23<sub>/13</sub></span>
+					<div class = "white"></div>
+					<div class = "black" id="14"></div><span>14<sub>/22</sub></span>
+					<div class = "white"></div>
+					<div class = "black" id="5"></div><span>5<sub>/31</sub></span>
+					<div class = "white"></div>
+				</div>
+				
+				<div class = "col-sm-4" id = "possibleMoves">
+					
+				</div>
+				<button class = "btn btn-primary rotate-button" onclick="myFunction()"> Rotate </button>
+			</div>
+			<br><br><br>
+		</div>
+		<script>
+			
+			current_move_count = 0;
+			graphics =	["<div class = \"top-indent\"></div><div class = \"red-man\"></div>", "<div class = \"top-king-indent\"></div><div class = \"red-king\"><span class = \"royal\">R</span></div>", "<div class = \"top-indent\"></div><div class = \"white-man\"></div>","<div class = \"top-king-indent\"></div><div class = \"white-king\"><span class = \"royal\">R</span></div>"];
+			possible = "1A2B3C4D5E6F7G8H9IJKLMNOPQRSTUV_WXYZabcdefghijklmnopqrstuvwxyz0123456789";
+			rotate = -1
+			
+			function myFunction(){
+				rotate = rotate * -1;
+				current_move_count = -1;
+			}
+			
+			function reloadPosition(){
+				document.getElementById('myScript').innerHTML = "";
+				
+				var salt = "?salt=";
+				for (i = 0; i < 25; i++){
+					salt += possible.charAt(Math.floor(Math.random() * possible.length));
+				}
+				
+				var script = document.createElement('script');
+				script.src = "position_data.js" + salt;
+				script.onload = function() {			
+					if (current_move_count != move_count){
+						current_move_count = move_count;
+						
+						if (who_am_I == -1){
+							for (i=0; i<possibleMoves.length; i++){
+								for (j=0; j<possibleMoves[i].length; j++){
+									possibleMoves[i][j] = 36 - possibleMoves[i][j];
+								}
+							}
+						}
+						
+						var list_of_moves = "";
+						for (i=0; i<possibleMoves.length; i++){
+							list_of_moves += "<p class = \"my-indent\">" + (i+1) + ". (";
+							for (j=0; j<possibleMoves[i].length;j++){
+								list_of_moves += possibleMoves[i][j] + " - ";
+							}
+							list_of_moves = list_of_moves.slice(0,-2)
+							list_of_moves += ")</p>";
+						
+						}
+						document.getElementById('possibleMoves').innerHTML = list_of_moves;
+						
+						for (i=1; i<36; i++){
+							if (rotate == -1){
+								j = 36 - i
+							}else{
+								j = i
+							}
+							if (myArray[i] == "1"){
+								document.getElementById(j).innerHTML = graphics[0];
+							}
+							if (myArray[i] == "2"){
+								document.getElementById(j).innerHTML = graphics[1];
+							}
+							if (myArray[i] == "-1"){
+								document.getElementById(j).innerHTML = graphics[2];
+							}
+							if (myArray[i] == "-2"){
+								document.getElementById(j).innerHTML = graphics[3];
+							}
+							if (myArray[i] == "0"){
+								document.getElementById(j).innerHTML = "";
+							}
+						}
+					}
+				};
+				document.getElementById('myScript').appendChild(script);
+			}
+			
+			var my_refresh = setInterval(reloadPosition,100);
+					
+		</script>
+	</body>
+</html>
